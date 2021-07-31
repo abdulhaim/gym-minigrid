@@ -919,7 +919,7 @@ class MiniGridEnv(gym.Env):
                 raise RecursionError('rejection sampling failed in place_obj')
 
             num_tries += 1
-
+            self.seed(10)
             pos = np.array((
                 self._rand_int(top[0], min(top[0] + size[0], self.grid.width)),
                 self._rand_int(top[1], min(top[1] + size[1], self.grid.height))
