@@ -922,7 +922,6 @@ class MiniGridEnv(gym.Env):
                 self._rand_int(top[0], min(top[0] + size[0], self.grid.width)),
                 self._rand_int(top[1], min(top[1] + size[1], self.grid.height))
             ))
-            print(pos)
 
             # Don't place the object on top of another object
             if self.grid.get(*pos) != None:
@@ -932,6 +931,10 @@ class MiniGridEnv(gym.Env):
             if np.array_equal(pos, self.agent_pos):
                 continue
 
+            # Old Goal Position
+            if np.array_equal(pos, [18  2]):
+                continue 
+                
             # Check if there is a filtering criterion
             if reject_fn and reject_fn(self, pos):
                 continue
