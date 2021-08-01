@@ -112,8 +112,9 @@ class MultiRoomEnv(MiniGridEnv):
         self.place_agent(roomList[0].top, roomList[0].size)
 
         # Place the final goal in the last room
+        print("GOAL POS")
         self.goal_pos = self.place_obj(Goal(), roomList[-1].top, roomList[-1].size)
-
+        print("GOAL", self.goal_pos)
         self.mission = 'traverse the rooms to get to the goal'
 
     def _placeRoom(
