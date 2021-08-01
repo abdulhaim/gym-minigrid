@@ -932,7 +932,7 @@ class MiniGridEnv(gym.Env):
                 continue
 
             # Old Goal Position
-            if np.array_equal(pos, [18  2]):
+            if np.array_equal(pos, [18, 2]):
                 continue 
                 
             # Check if there is a filtering criterion
