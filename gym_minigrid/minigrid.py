@@ -827,8 +827,6 @@ class MiniGridEnv(gym.Env):
         """
         Generate random integer in [low,high[
         """
-        print("low", low)
-        print("high", high)
         return self.np_random.randint(low, high)
 
     def _rand_float(self, low, high):
